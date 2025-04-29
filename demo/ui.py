@@ -42,8 +42,19 @@ def create_ui(
 
     if DEFAULT_FACE_DETECT_MODEL not in face_detect_models:
         DEFAULT_FACE_DETECT_MODEL = "mtcnn"
+        
+    css = """
+        /* 自定义字体设置，覆盖所有 @font-face */
+        * {
+            font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif !important;
+        }
 
-    demo = gr.Blocks(title="HivisionIDPhotos")
+        footer {
+            display: none !important;
+        }
+        """
+
+    demo = gr.Blocks(title="AI 证件照", css=css, theme=gr.themes.Base(), analytics_enabled=False)
 
     with demo:
         gr.HTML(load_description(os.path.join(root_dir, "demo/assets/title.md")))

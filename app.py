@@ -26,7 +26,7 @@ if len(HUMAN_MATTING_MODELS_CHOICE) == 0:
         + "No existing portrait segmentation model was found, please check the files in the hivision/creator/weights directory."
     )
 
-FACE_DETECT_MODELS = ["face++ (联网Online API)", "mtcnn"]
+FACE_DETECT_MODELS = ["mtcnn"] # 隐藏在线的face+模型
 FACE_DETECT_MODELS_EXPAND = (
     ["retinaface-resnet50"]
     if os.path.exists(
