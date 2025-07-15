@@ -789,4 +789,12 @@ def create_ui(
                 ],
             )
 
+        gr.HTML(
+            """
+            <div style="text-align: center; margin-top: 20px;">
+                <p style="color: #888; font-size: 12px;">页面包含由人工智能模型生成的内容，其生成内容的准确性和完整性无法保证，不代表我们的态度或观点。</p>
+                <p style="color: #888; font-size: 12px;">Zeyi Lin and SwanLab Team. HivisionIDPhotos: A Lightweight and Efficient AI ID Photos Tool. GitHub, 2024. URL: <a href="https://github.com/Zeyi-Lin/HivisionIDPhotos" target="_blank">https://github.com/Zeyi-Lin/HivisionIDPhotos</a>.</p>
+            </div>
+            """
+        )
     return demo
